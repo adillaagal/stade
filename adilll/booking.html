@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Facilities - Pool & Football Field</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">Home</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="stade.html">Stadium</a>
+                    </li>
+                    
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Booking Section -->
+    <div class="container my-5">
+        <h1 class="text-center mb-5">Book Our Facilities</h1>
+        
+        <div class="row">
+            <!-- Pool Booking -->
+            <div class="col-md-6 mb-4">
+                <div class="card">
+                    <img src="images/piscine1.jpg" class="card-img-top" alt="Pool">
+                    <div class="card-body">
+                        <h5 class="card-title">Pool Booking</h5>
+                        <form id="poolBookingForm">
+                            <div class="mb-3">
+                                <label for="poolName" class="form-label">Your Name</label>
+                                <input type="text" class="form-control" id="poolName" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="poolEmail" class="form-label">Email Address</label>
+                                <input type="email" class="form-control" id="poolEmail" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="poolDate" class="form-label">Select Date</label>
+                                <input type="date" class="form-control" id="poolDate" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="poolTime" class="form-label">Select Time</label>
+                                <select class="form-control" id="poolTime" required>
+                                    <option value="">Choose time slot...</option>
+                                    <option value="09:00">09:00 - 10:00</option>
+                                    <option value="10:00">10:00 - 11:00</option>
+                                    <option value="11:00">11:00 - 12:00</option>
+                                    <option value="14:00">14:00 - 15:00</option>
+                                    <option value="15:00">15:00 - 16:00</option>
+                                    <option value="16:00">16:00 - 17:00</option>
+                                </select>
+                            </div>
+                            <div class="mb-3">
+                                <label for="poolPeople" class="form-label">Number of People</label>
+                                <input type="number" class="form-control" id="poolPeople" min="1" max="10" required>
+                            </div>
+                            <div class="mb-3">
+                                <p class="mb-2">Price: $15 per person</p>
+                                <p class="fw-bold">Total: $<span id="poolTotal">0</span></p>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Book Pool</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Football Field Booking -->
+            <div class="col-md-6 mb-4">
+                <div class="card">
+                    <img src="images/stade1.jpg" class="card-img-top" alt="Football Field">
+                    <div class="card-body">
+                        <h5 class="card-title">Football Field Booking</h5>
+                        <form id="fieldBookingForm">
+                            <div class="mb-3">
+                                <label for="fieldName" class="form-label">Your Name</label>
+                                <input type="text" class="form-control" id="fieldName" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="fieldEmail" class="form-label">Email Address</label>
+                                <input type="email" class="form-control" id="fieldEmail" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="fieldDate" class="form-label">Select Date</label>
+                                <input type="date" class="form-control" id="fieldDate" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="fieldTime" class="form-label">Select Time</label>
+                                <select class="form-control" id="fieldTime" required>
+                                    <option value="">Choose time slot...</option>
+                                    <option value="09:00">09:00 - 10:00</option>
+                                    <option value="10:00">10:00 - 11:00</option>
+                                    <option value="11:00">11:00 - 12:00</option>
+                                    <option value="14:00">14:00 - 15:00</option>
+                                    <option value="15:00">15:00 - 16:00</option>
+                                    <option value="16:00">16:00 - 17:00</option>
+                                </select>
+                            </div>
+                            <div class="mb-3">
+                                <label for="fieldDuration" class="form-label">Duration (hours)</label>
+                                <select class="form-control" id="fieldDuration" required>
+                                    <option value="1">1 hour</option>
+                                    <option value="2">2 hours</option>
+                                    <option value="3">3 hours</option>
+                                </select>
+                            </div>
+                            <div class="mb-3">
+                                <p class="mb-2">Price: $50 per hour</p>
+                                <p class="fw-bold">Total: $<span id="fieldTotal">50</span></p>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Book Field</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/booking.js"></script>
+</body>
+</html>

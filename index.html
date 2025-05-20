@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Le Complexe - Café • Restaurant • Piscine</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header et Navigation -->
+    <header class="header">
+        <div class="logo">Le Complexe</div>
+        <nav class="nav-desktop">
+            <ul>
+                <li><a href="#accueil">Accueil</a></li>
+                <li><a href="#cafe">Café</a></li>
+                <li><a href="#restaurant">Restaurant</a></li>
+                <li><a href="#piscine">Piscine</a></li>
+                <li><a href="stade.html">Stade</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="booking.html">booking</a></li>
+            </ul>
+        </nav>
+        <button class="burger-menu" aria-label="Menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    </header>
+
+    <!-- Menu Mobile -->
+    <nav class="nav-mobile">
+        <ul>
+            <li><a href="#accueil">Accueil</a></li>
+            <li><a href="#cafe">Café</a></li>
+            <li><a href="#restaurant">Restaurant</a></li>
+            <li><a href="#piscine">Piscine</a></li>
+            <li><a href="stade.html">Stade</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Bannière -->
+    <section id="accueil" class="banner">
+        <div class="banner-content">
+            <h1>Bienvenue au Complexe</h1>
+            <p>Un espace unique alliant détente, gastronomie et bien-être</p>
+        </div>
+    </section>
+
+    <!-- Section Café -->
+    <section id="cafe" class="section">
+        <h2>Notre Café</h2>
+        <div class="cafe-content">
+            <div class="description">
+                <p>Un espace chaleureux pour vos moments de détente, avec une sélection de cafés premium et de pâtisseries maison.</p>
+                <div class="horaires">
+                    <h3>Horaires d'ouverture</h3>
+                    <ul>
+                        <li>Lundi - Vendredi : 7h30 - 20h00</li>
+                        <li>Samedi - Dimanche : 8h00 - 21h00</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="gallery" id="cafe-gallery">
+                <!-- Images ajoutées dynamiquement via JS -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Restaurant -->
+    <section id="restaurant" class="section">
+        <h2>Notre Restaurant</h2>
+        <div class="restaurant-content">
+            <div class="menu-container">
+                <div class="menu-nav">
+                    <button class="menu-btn active" data-category="entrees">Entrées</button>
+                    <button class="menu-btn" data-category="plats">Plats</button>
+                    <button class="menu-btn" data-category="desserts">Desserts</button>
+                </div>
+                <div class="menu-items" id="menu-content">
+                    <!-- Menu items ajoutés dynamiquement via JS -->
+                </div>
+            </div>
+            <div class="food-gallery" id="food-gallery">
+                <div class="gallery-category" id="gallery-entrees">
+                    <!-- Photos des entrées -->
+                </div>
+                <div class="gallery-category" id="gallery-plats">
+                    <!-- Photos des plats -->
+                </div>
+                <div class="gallery-category" id="gallery-desserts">
+                    <!-- Photos des desserts -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Piscine -->
+    <section id="piscine" class="section">
+        <h2>Notre Piscine</h2>
+        <div class="piscine-content">
+            <div class="info-piscine">
+                <div class="tarifs">
+                    <h3>Tarifs</h3>
+                    <ul>
+                        <li>Entrée adulte : 35 DH</li>
+                        <li>Entrée enfant : 20 DH</li>
+                        <li>Abonnement mensuel : 600 DH</li>
+                    </ul>
+                </div>
+                <div class="reservation">
+                    <h3>Réservation</h3>
+                    <p>Réservez votre créneau en ligne ou par téléphone</p>
+                    <button class="btn-reserver">Réserver maintenant</button>
+                </div>
+            </div>
+            <div class="gallery" id="piscine-gallery">
+                <!-- Images ajoutées dynamiquement via JS -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="contact-info">
+                <h3>Nous contacter</h3>
+                <p><i class="fas fa-map-marker-alt"></i> 123 Avenue des Loisirs, 75000 Paris</p>
+                <p><i class="fas fa-phone"></i> +33 1 23 45 67 89</p>
+                <p><i class="fas fa-envelope"></i> contact@lecomplexe.fr</p>
+            </div>
+            <div class="social-media">
+                <h3>Suivez-nous</h3>
+                <div class="social-icons">
+                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+            <form class="contact-form" id="contact-form">
+                <h3>Contact rapide</h3>
+                <input type="email" placeholder="Votre email" required>
+                <textarea placeholder="Votre message" required></textarea>
+                <button type="submit" class="btn-submit">Envoyer</button>
+            </form>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Le Complexe. Tous droits réservés.</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Le Stade - Le Complexe</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="css/stade.css">
+</head>
+<body>
+    <!-- Header et Navigation -->
+    <header class="header">
+        <div class="logo">Le Complexe</div>
+        <nav class="nav-desktop">
+            <ul>
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="index.html#cafe">Café</a></li>
+                <li><a href="index.html#restaurant">Restaurant</a></li>
+                <li><a href="index.html#piscine">Piscine</a></li>
+                <li><a href="stade.html" class="active">Stade</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+            </ul>
+        </nav>
+        <button class="burger-menu" aria-label="Menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    </header>
+
+    <!-- Menu Mobile -->
+    <nav class="nav-mobile">
+        <ul>
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="index.html#cafe">Café</a></li>
+            <li><a href="index.html#restaurant">Restaurant</a></li>
+            <li><a href="index.html#piscine">Piscine</a></li>
+            <li><a href="stade.html" class="active">Stade</a></li>
+            <li><a href="index.html#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Bannière du Stade -->
+    <section class="stade-banner">
+        <div class="banner-content">
+            <h1>Notre Stade</h1>
+            <p>Un espace sportif moderne pour vos activités</p>
+        </div>
+    </section>
+
+    <!-- Informations du Stade -->
+    <section class="stade-info section">
+        <div class="stade-content">
+            <div class="stade-description">
+                <h2>Installations Sportives</h2>
+                <ul>
+                    <li><i class="fas fa-futbol"></i> Terrain de football en gazon synthétique</li>
+                    <li><i class="fas fa-table-tennis"></i> 4 Courts de tennis professionnels</li>
+                    <li><i class="fas fa-running"></i> Piste d'athlétisme</li>
+                    <li><i class="fas fa-shower"></i> Vestiaires modernes</li>
+                    <li><i class="fas fa-tshirt"></i> Location d'équipements</li>
+                </ul>
+                <div class="tennis-features">
+                    <h3>Nos Courts de Tennis</h3>
+                    <ul>
+                        <li><i class="fas fa-check"></i> Surface en terre battue et en dur</li>
+                        <li><i class="fas fa-lightbulb"></i> Éclairage pour jeu nocturne</li>
+                        <li><i class="fas fa-umbrella"></i> 2 courts couverts</li>
+                        <li><i class="fas fa-user-tie"></i> Professeurs de tennis certifiés</li>
+                        <li><i class="fas fa-trophy"></i> Organisation de tournois amicaux</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="stade-gallery" id="stade-gallery">
+                <!-- Images ajoutées dynamiquement via JS -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Système de Réservation -->
+    <section class="reservation-system section">
+        <h2>Réserver le Stade</h2>
+        <div class="booking-container">
+            <div class="calendar-container">
+                <div class="calendar-header">
+                    <button id="prevMonth"><i class="fas fa-chevron-left"></i></button>
+                    <h3 id="currentMonth">Avril 2025</h3>
+                    <button id="nextMonth"><i class="fas fa-chevron-right"></i></button>
+                </div>
+                <div class="calendar" id="calendar">
+                    <!-- Calendrier généré via JS -->
+                </div>
+            </div>
+            <div class="time-slots">
+                <h3>Créneaux horaires disponibles</h3>
+                <div id="timeSlots">
+                    <!-- Créneaux horaires générés via JS -->
+                </div>
+            </div>
+            <div class="booking-form">
+                <h3>Détails de la réservation</h3>
+                <form id="bookingForm">
+                    <div class="form-group">
+                        <label for="name">Nom complet</label>
+                        <input type="text" id="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Téléphone</label>
+                        <input type="tel" id="phone" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="activity">Type d'activité</label>
+                        <select id="activity" required>
+                            <option value="">Sélectionnez une activité</option>
+                            <option value="football">Football</option>
+                            <option value="tennis">Tennis</option>
+                            <option value="athletisme">Athlétisme</option>
+                            <option value="entrainement">Entraînement</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="participants">Nombre de participants</label>
+                        <input type="number" id="participants" min="1" max="30" required>
+                    </div>
+                    <button type="submit" class="btn-submit">Confirmer la réservation</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tarifs -->
+    <section class="pricing section">
+        <h2>Nos Tarifs</h2>
+        <div class="pricing-cards">
+            <div class="price-card">
+                <h3>Créneau Standard</h3>
+                <p class="price">80€</p>
+                <p class="duration">1 heure</p>
+                <ul>
+                    <li>Accès au terrain ou court</li>
+                    <li>Vestiaires inclus</li>
+                    <li>Équipement non inclus</li>
+                </ul>
+            </div>
+            <div class="price-card">
+                <h3>Tennis</h3>
+                <p class="price">40€</p>
+                <p class="duration">1 heure</p>
+                <ul>
+                    <li>Court de tennis</li>
+                    <li>Vestiaires inclus</li>
+                    <li>Location de raquettes disponible</li>
+                </ul>
+            </div>
+            <div class="price-card featured">
+                <h3>Pack Club</h3>
+                <p class="price">300€</p>
+                <p class="duration">5 heures</p>
+                <ul>
+                    <li>Accès au terrain</li>
+                    <li>Vestiaires inclus</li>
+                    <li>Équipement inclus</li>
+                    <li>Coach sportif disponible</li>
+                </ul>
+            </div>
+            <div class="price-card">
+                <h3>Abonnement Mensuel</h3>
+                <p class="price">500€</p>
+                <p class="duration">par mois</p>
+                <ul>
+                    <li>Accès illimité</li>
+                    <li>Vestiaires privés</li>
+                    <li>Équipement inclus</li>
+                    <li>Coach personnel</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="contact-info">
+                <h3>Nous contacter</h3>
+                <p><i class="fas fa-map-marker-alt"></i> 123 Avenue des Loisirs, 75000 Paris</p>
+                <p><i class="fas fa-phone"></i> +33 1 23 45 67 89</p>
+                <p><i class="fas fa-envelope"></i> contact@lecomplexe.fr</p>
+            </div>
+            <div class="social-media">
+                <h3>Suivez-nous</h3>
+                <div class="social-icons">
+                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Le Complexe. Tous droits réservés.</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/stade.js"></script>
+</body>
+</html>
